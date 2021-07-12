@@ -21,4 +21,26 @@ are placed in common files, which are shared by several labs.
 
 - The lab uses the standard OneLAN setup, which has 3 containers.
 A customization is made in the Compose file so only one container
-is used. 
+is used.
+
+## Commands
+- In labsetup folder, 
+   1. docker-compose build
+   2. docker-compose up
+   3. docker ps (to get the IDs of the containers)
+   4. docker exec -it <first two digits of the attacker id> /bin/bash (it will open a terminal in the corresponding container)
+   5. docker exec -it <first two digits of the victims id> /bin/bash
+
+- To install gcc and pcap on the attacker container:
+   1. gcc: 
+     apt update
+     apt install build-essential
+     apt-get install manpages-dev
+
+   2. pcap:
+     apt-get install libpcap-dev
+ 
+- To send a HTTP post reuest from the victim's container
+     1. curl -d "user = eliza & pass=abcd" -X POST www.google.com -so /dev/null
+
+ 
