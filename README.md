@@ -28,8 +28,8 @@ is used.
    1. docker-compose build
    2. docker-compose up
    3. docker ps (to get the IDs of the containers)
-   4. docker exec -it <first two digits of the attacker id> /bin/bash (it will open a terminal in the corresponding container)
-   5. docker exec -it <first two digits of the victims id> /bin/bash
+   4. docker exec -it (first two digits of the attacker id) /bin/bash (it will open a terminal in the corresponding container)
+   5. docker exec -it (first two digits of the victims id) /bin/bash
 
 - To install gcc and pcap on the attacker container:
    1. gcc: 
