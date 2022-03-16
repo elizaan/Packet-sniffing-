@@ -35,14 +35,20 @@ is used.
 
 - To install gcc and pcap on the attacker container:
    1. gcc: 
+   ```
      apt update
      apt install build-essential
      apt-get install manpages-dev
-
+   ```
+   
    2. pcap:
+   ```
      apt-get install libpcap-dev
- 
+   ```
 - To send a HTTP post reuest from the victim's container
-     1. curl -d "user = eliza & pass=abcd" -X POST www.google.com -so /dev/null
+     ```
+     curl -d "user = eliza & pass=abcd" -X POST www.google.com -so /dev/null
+     
+     ```
 
  
